@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f9e4f0;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.poli.controlador.PrimaryController">
+   <center>
+      <TableView fx:id="tablaTransporte" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0e6f6; -fx-border-color: #d4b8e0; -fx-border-width: 2;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: #d4b8e0; -fx-padding: 10;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnCrear" mnemonicParsing="false" style="-fx-background-color: b8d4e0; -fx-background-radius: 8;" text="Crear" textFill="#5a3a5a" />
+            <Button fx:id="btnListarTodos" mnemonicParsing="false" style="-fx-background-color: ffb3c6; -fx-background-radius: 8;" text="ListarTodos" textFill="#5a3a5a" />
+            <Button fx:id="btnListarUno" mnemonicParsing="false" style="-fx-background-color: b8d4e0; -fx-background-radius: 8;" text="ListarUno" textFill="#5a3a5a" />
+            <Button fx:id="btnModificar" mnemonicParsing="false" style="-fx-background-color: ffb3c6; -fx-background-radius: 8;" text="Modificar" textFill="#5a3a5a" />
+            <Button fx:id="btnEliminar" mnemonicParsing="false" style="-fx-background-color: b8d4e0; -fx-background-radius: 8;" text="Eliminar" textFill="#5a3a5a" />
+            <Button fx:id="btnGuardar" mnemonicParsing="false" style="-fx-background-color: ffb3c6; -fx-background-radius: 8;" text="Guardar" textFill="#5a3a5a" />
+            <Button fx:id="btnLeer" mnemonicParsing="false" style="-fx-background-color: b8d4e0; -fx-background-radius: 8;" text="Leer" textFill="#5a3a5a" />
+            <Button fx:id="btnSalir" mnemonicParsing="false" style="-fx-background-color: ffb3c6; -fx-background-radius: 8;" text="Salir" textFill="#5a3a5a" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <Label style="-fx-background-color: #ffb3c6; -fx-label-padding: 10;" text="Gestion de Camiones" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Georgia" size="20.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
