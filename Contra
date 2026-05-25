@@ -1,0 +1,108 @@
+
+Pasos scene builder:
+
+Paso 2 — Agregar el BorderPane
+
+En la Library (arriba izquierda) busca BorderPane
+Arrástralo al canvas del centro
+Paso 3 — Agregar la TableView al centro
+
+En la Library busca TableView
+Arrástrala y suéltala en la zona CENTER del BorderPane (la parte más grande del medio)
+
+En el panel Hierarchy debe quedarte así:
+
+Paso 4 — Agregar los botones abajo
+
+En la Library busca HBox
+Arrástralo a la zona insert BOTTOM del BorderPane (en el Hierarchy)
+Luego busca Button en la Library y agrégalo 6 veces dentro del HBox
+
+En el Hierarchy debe quedar:
+BorderPane
+├── center → TableView
+└── bottom → HBox
+    ├── Button
+    ├── Button
+    ├── Button
+    ├── Button
+    ├── Button
+    └── Button
+Paso 5 — Cambiar el texto de los botones
+En el panel Hierarchy haz clic en cada Button y en el panel derecho (Properties) busca el campo Text y cámbialo:
+Button 1Crear camiónButton 2Listar todosButton 3Listar unoButton 4ModificarButton 5EliminarButton 6GuardarButton 7LeerButton 8Salir
+Paso 6 — Darle fx:id a la TableView y a los botones
+Esto es lo más importante porque así conectas el diseño con el código Java.
+Para cada elemento:
+
+Clic sobre el elemento en el Hierarchy
+Panel derecho → pestaña Code (abajo a la derecha)
+En el campo fx:id escribe el nombre
+
+Elementofx:idTableViewtablaTransporteCrear camiónbtnCrearListar todosbtnListarTodosListar unobtnListarUnoModificarbtnModificarEliminarbtnEliminarGuardarbtnGuardarLeerbtnLeerSalirbtnSalir
+Paso 7 — Conectar el Controlador
+Ahora le dices al FXML cuál es tu clase controladora.
+
+En el panel Hierarchy haz clic en BorderPane
+Panel derecho → pestaña Code
+Abajo del todo busca la sección Controller, aunque también puedes verla en la parte inferior izquierda donde dice Controller
+Haz clic ahí y escribe:
+
+co.edu.poli.controlador.PrimaryController
+DISEÑO:
+Paso 1 — Agregar el título arriba
+
+En la Library busca Label
+Arrástralo a insert TOP en el Hierarchy
+En Properties → campo Text escribe: Gestión de Camiones
+En Properties → Font haz clic en el lápiz ✏️ y ponle tamaño 20 y Bold
+
+Paso 2 — Espaciado entre botones
+
+Clic en el HBox en el Hierarchy
+Panel derecho → Properties
+Busca el campo Spacing y ponle 10
+Busca Alignment y selecciona CENTER
+Paso 3 — Color de fondo del HBox inferior
+Paso 1 — Fondo general del BorderPane
+
+Clic en BorderPane en el Hierarchy
+Properties → campo Style escribe:
+-fx-background-color: #f9e4f0;
+Paso 2 — Fondo del HBox de botones
+
+Clic en el HBox en el Hierarchy
+Properties → campo Style escribe:
+
+-fx-background-color: #d4b8e0; -fx-padding: 10;
+Paso 3 — Color de fondo del Label del título
+
+Clic en el Label del título en el Hierarchy
+Properties → campo Style escribe:
+
+-fx-background-color: #ffb3c6; -fx-padding: 10; -fx-font-size: 20; -fx-font-weight: bold;
+Paso 4 — Color de los botones
+Esto hay que hacerlo uno por uno en Scene Builder. Para cada botón:
+
+Clic en el botón en el Hierarchy
+Properties → campo Style escribe:
+
+-fx-background-color: #ffb3c6; -fx-background-radius: 8;
+Hazlo con los 8 botones. Si quieres puedes alternar los colores:
+
+Botones impares (Crear, ListarUno, Eliminar, Leer) → #ffb3c6 rosa
+Botones pares (ListarTodos, Modificar, Guardar, Salir) → #b8d4e0 azul
+Paso 5 — Color de texto de los botones
+Para que el texto se vea bien sobre esos colores pasteles, ponle un color oscuro. Para cada botón:
+
+Clic en el botón
+Properties → busca Text Fill
+Haz clic en el cuadro de color y escribe: #5a3a5a (morado oscuro)
+
+Hazlo con los 8 botones. Ese color combina perfecto con el rosa y el azul pastel
+Paso 6 — Estilizar la TableView
+
+Clic en la TableView en el Hierarchy
+Properties → campo Style escribe:
+
+-fx-background-color: #f0e6f6; -fx-border-color: #d4b8e0; -fx-border-width: 2;
